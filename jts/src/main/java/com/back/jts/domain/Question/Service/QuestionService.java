@@ -15,4 +15,9 @@ public class QuestionService {
     public List<Question> getList() {
         return this.questionRepository.findAll();
     }
+
+    public Question getQuestion(Long id) {
+        return this.questionRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("질문을 찾을 수 없습니다."));
+    }
 }
