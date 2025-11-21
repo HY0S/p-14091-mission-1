@@ -1,6 +1,6 @@
-package com.back.jts.domain.Repository;
+package com.back.jts.domain.Question.Repository;
 
-import com.back.jts.domain.Entity.Question;
+import com.back.jts.domain.Question.Entity.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

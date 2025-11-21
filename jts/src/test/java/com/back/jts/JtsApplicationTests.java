@@ -1,16 +1,13 @@
 package com.back.jts;
 
-import com.back.jts.domain.Entity.Question;
-import com.back.jts.domain.Repository.QuestionRepository;
+import com.back.jts.domain.Question.Entity.Question;
+import com.back.jts.domain.Question.Repository.QuestionRepository;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

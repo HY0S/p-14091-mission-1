@@ -1,4 +1,4 @@
-package com.back.jts.domain.Controller;
+package com.back.jts.domain.sbb.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

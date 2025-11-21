@@ -1,5 +1,6 @@
-package com.back.jts.domain.Entity;
+package com.back.jts.domain.Question.Entity;
 
+import com.back.jts.domain.Answer.Entity.Answer;
 import com.back.jts.global.BaseEntity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,7 +8,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
