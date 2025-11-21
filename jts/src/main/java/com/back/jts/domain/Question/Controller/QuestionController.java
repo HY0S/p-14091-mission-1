@@ -2,6 +2,9 @@ package com.back.jts.domain.Question.Controller;
 
 import com.back.jts.domain.Question.Entity.Question;
 import com.back.jts.domain.Question.Repository.QuestionRepository;
+import com.back.jts.domain.Question.Service.QuestionService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,18 +14,18 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+@RequiredArgsConstructor
 @Controller
 public class QuestionController {
-    private final QuestionRepository questionRepository;
+    @Autowired
+    private final QuestionService questionService;
 
-    public QuestionController(QuestionRepository questionRepository) {
-        this.questionRepository = questionRepository;
-    }
+
 
     @GetMapping("/question/list")
     @ResponseBody
     public String list() throws IOException {
-        List<Question> questions = questionRepository.findAll();
+        List<Question> questions = questionService.getList();
         
         StringBuilder tableRows = new StringBuilder();
         for (Question question : questions) {
